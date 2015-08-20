@@ -1,0 +1,45 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title Online Chess Game
+        link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+        link(rel='stylesheet', type='text/css', href='/static/css/bootstrap.min.css')
+body(style='background: url(../../image/login_background.jpg) no-repeat;')
+    span
+        nav.navbar.navbar-inverse.navbar-fixed-top
+            .collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a.brand(href="javascript:void(0)")  Welcome #{user}
+                    li.active
+                        a(href='/login/room') Room Page
+                    li
+                        a(href='/login/info') Profile
+                    li
+                        a(href='/login/modify') Modify Password
+                    li
+                        a(href='/login/rank') Rank
+                form.navbar-form.navbar-right(action='/')
+                    button.btn.btn-warning(type='submit') Log Out
+        .row
+            .col-md-6(style='margin-top: 100px')
+                form(method='post', action='/login/enterRoom/?room_id=1001}')
+                    input.img-circle.center-block.img-responsive(name='submit', type='image', src='/static/image/room1tmp.jpg')
+            .col-md-6(style='margin-top: 100px')
+                form(method='post', action='/login/enterRoom/?room_id=1002}')
+                    input.img-circle.center-block.img-responsive(name='submit', type='image', src='/static/image/room2tmp.jpg')
+            .col-md-6(style='margin-top: 100px')
+                // <img src="/static/image/room1.jpg" class="img-circle">
+                form(method='post', action='/login/enterRoom/?room_id=1003}')
+                    input.img-circle.center-block.img-responsive(name='submit', type='image', src='/static/image/room3tmp.jpg')
+            .col-md-6(style='margin-top: 100px')
+                form(method='post', action='/login/enterRoom/?room_id=1004}')
+                    input.img-circle.center-block.img-responsive(name='submit', type='image', src='/static/image/room4tmp.jpg')
+
+.footer
+    p  
+    p(style='color: #606060') ©徐肖瑶   浙江大学计算机学院
+    script(src='/static/js/jquery-1.8.3.min.js')
+    script(src='/static/js/socket.js')
+    script(src='/static/js/bootstrap/js/bootstrap.min.js')

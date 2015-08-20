@@ -1,0 +1,217 @@
+body{
+    font-family: "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp";
+}
+a{
+    cursor: pointer;
+}
+ul { list-style-type:none; margin:0 0 1em 0; padding:0; line-height:0%; }
+ul li { margin:0; padding:0; line-height:normal; zoom:1; }
+.pull-right{
+    float: right;
+}
+.banner{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-family: "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", "TW\-Kai", "KaiTi", "KaiTi_GB2312", "STKaiti";
+/*background: #eee; /*url(../img/banner.jpg);*/
+}
+.banner img{
+    float: left;
+    display: inline;
+}
+.banner h1{
+    font-size: 40px;
+    padding-left: 20%;
+    padding-top: 40%;
+    font-weight: bolder;
+    text-shadow: 3px -1px 5px rgba(0, 0, 0, 0.3);
+}
+/*.nav{
+  float: right;
+  margin-right: 10%;
+  height: 30px;
+  line-height: 30px;
+  color: #fff;
+  }
+  .nav a{
+  display: inline-block;
+  padding: 0 5px 5px 5px;
+  height: 100%;
+  color: #fff;
+  text-decoration: none;
+  }
+  .nav a:hover{
+  text-decoration: underline;
+  }
+  .nav li{
+  display: inline;
+  min-width: 70px;
+  line-height: 40px;
+  text-align: center;
+  }*/
+.container{
+    position: absolute;
+    left: 40%;
+    top: 50px;
+    width: 60%;
+    height: 500px;
+    padding-bottom: 50px;
+}
+.right-col{
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 70%;
+    height: 100%;
+}
+.blank{
+    float: left;
+    width: 100%;
+    height: 40px;
+}
+.content{
+    float: left;
+    width: 100%;
+    height: 460px;
+    overflow: hidden;
+}
+.tab{
+    float: left;
+    height: 100%;
+    border-bottom-left-radius: 10px;
+}
+.tab li{
+    display: inline-block;
+    width: 70%;
+    height: 40px;
+    background: #740516;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 0 10px 0 0;
+    box-shadow: 5px -3px 5px rgba(0, 0, 0, 0.3), 5px -5px 5px rgba(0, 0, 0, 0.3) inset;
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+.tab li:hover{
+    background: #9A0511;
+}
+.tab .selected{
+    color: #fff;
+    background: #9A0511;
+    width: 80%;
+}
+.tab .selected:hover{
+    color: #fff;
+    background: #9A0511;
+}
+.tab .tab-header{
+    width: 80%;
+    margin-bottom: 10px;
+    background: #6B8B88;
+    font-size: 20px;
+    border: 1px solid #fff;
+    border-width: 1px 1px 1px 0;
+    border-radius: 0px 10px 10px 0;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3) inset;
+}
+.tab .tab-header:hover{
+    background: #6B8B88;
+}
+.page{
+    font-family: "NSimSun", "SimSun", "STSong", "AR PL SungtiL GB", "TW\-Sung", "WenQuanYi Bitmap Song";
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.lunch-item{
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 130px;
+    height: 130px;
+    color: #fff;
+    background-color: #FFC925;
+    border-radius: 0px;
+    background-image: url('../img/item-bg4.jpg');
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.lunch-img{
+    width: 100%;
+    height: 80%;
+    background: #fff;
+}
+.lunch-img img{
+    width: 100%;
+    height: 100%;
+}
+.lunch-info{
+    padding: 10px;
+}
+.left-col{
+    position: absolute;
+    left: 0;
+    top: 0px;
+    padding: 0;
+    width: 20%;
+    height: 100%;
+}
+.dec-line{
+    float: left;
+    margin-left: -5px;
+    width: 5px;
+    height: 90%;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.3);
+}
+.footer{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.dingdan{
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+    text-align :center;
+}
+
+.dingdan th{
+    text-align:center;
+}
+
+div.center {
+    text-align :center;
+
+}
+div.center ul{
+    display:inline-block;
+}
+div.center li a {
+    color: blue;
+}

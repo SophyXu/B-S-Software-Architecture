@@ -1,0 +1,61 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title Online Chess Game
+        link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+        link(rel='stylesheet', type='text/css', href='/static/css/bootstrap.min.css')
+    body(style='background: url(/static/image/login_background.jpg) no-repeat;')
+        span
+            nav.navbar.navbar-inverse.navbar-fixed-top
+                .collapse.navbar-collapse
+                    ul.nav.navbar-nav
+                        li
+                            a.brand(href="javascript:void(0)")  Welcome #{user}
+                        li
+                            a(href='/login/room') Room Page
+                        li
+                            a(href='/login/info') Profile
+                        li.active
+                            a(href='/login/modify') Modify Password
+                        li
+                            a(href='/login/rank') Rank
+                    form.navbar-form.navbar-right(action='/')
+                        button.btn.btn-warning(type='submit') Log Out
+        span
+            .col-md-4
+            .col-md-4(style='padding-top: 150px;')
+                .panel.panel-default(style='background-color:rgba(240,240,240,0.4);')
+                    .panel-body
+                        form(role='form', method='post', action='/login/change')
+                           .form-group
+                              label Old Password
+                              input.form-control.center-block(maxlength='30', type='password', placeholder='Enter Old Password', name='passO')
+                           .form-group
+                              label New Password
+                              input.form-control.center-block(maxlength='30', type='password', placeholder='Enter New Password', name='passM')
+                           .form-group
+                              label Confirm New Password
+                              input.form-control.center-block(maxlength='30', type='password', placeholder='Enter New Password again', name='passReM')
+                              h2
+                              h3
+                              button.btn.btn-warning.btn-block(type="submit") Change Password
+                              h5
+
+            script.
+               var signal = #{signal};
+               if (signal == 0) {}
+               else if (signal == 1) {
+                  alert('Wrong old password!');
+               } else if (signal == 2) {
+                  alert('Password does not match the confirm password...');
+               } else if (signal == 3) {
+                  alert('Successfully change password!');
+               }
+
+.footer
+        p  
+        p(style='color: #606060') ©徐肖瑶   浙江大学计算机学院
+    script(src='/static/js/jquery-1.8.3.min.js')
+    script(src='/static/js/socket.js')
+    script(src='/static/js/bootstrap/js/bootstrap.min.js')

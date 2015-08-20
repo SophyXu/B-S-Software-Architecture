@@ -1,0 +1,64 @@
+doctype html
+html
+    head
+        meta(charset='UTF-8')
+        title Online Chess Game
+        link(rel='stylesheet', type='text/css', href='/static/css/style.css')
+        link(rel='stylesheet', type='text/css', href='/static/css/bootstrap.min.css')
+    body(style='background-image:url(/static/image/choose_background.jpg); background-repeat:no-repeat')
+        .col-md-8(style='padding-top: 100px; padding-left: 60px; padding-right: 80px;')
+            .panel.panel-default(style='background-color:rgba(240,240,240,0.2);')
+                .panel-heading(style='background-color:rgba(240,240,240,0.4);')
+                    h2(style='color: #F8F8F8') 中国象棋在线游戏
+                .panel-body(style='background-color:rgba(240,240,240,0.3);')
+                    h4(style='color: #F8F8F8')
+                        | 象棋，亦作“象碁”，汉族棋类益智游戏，中国象棋在中国有着三千多年的历史，属于二人对抗性游戏的一种。由于用具简单，趣味性强，成为流行极为广泛的棋艺活动。是我国正式开展的78个体育项目之一。
+                        br
+                        |         在中国古代，象棋被列为士大夫们的修身之艺。现在则被视为是怡神益智的一种有益身心的活动。有着数以亿计的爱好者。它不仅能丰富文化生活，陶冶情操，更有助于开发智力，启迪思维，锻炼辨证分析能力和培养顽强的意志 。
+                        br
+                        |         中国象棋是由两人轮流走子，在战法上遵循古代孙子兵法中的“不战而屈人之兵，善之善者也。”的作战思想，以“将死”或“困毙”对方将（帅）为胜的一种二人对抗性游戏。对局时，由执红棋的一方先走，双方轮流各走一招，直至分出胜、负、和，对局即终了。在棋战中，人们可以从攻与防、虚与实、整体与局部等复杂关系的变化中提升思维能力。
+                        | 总之，中国象棋是模拟的古代战争、直线战争、陆地战争、平面战争。
+                        br
+                        |         中国象棋历史悠久，它难易适中，基本规则简明易懂，古今中外男女老少皆宜，变化丰富细腻，棋盘棋子文字都体现了中国文化。
+        .col-md-4(style='padding-top: 100px; padding-left: 60px; padding-right: 60px;')
+            .panel.panel-default(style='background-color:rgba(240,240,240,0.4);')
+                .panel-body
+                    form(action='login/login', method='post')
+                        h3(style='color: #F8F8F8') Play Chinese Chess
+                        h4(style='color: #F8F8F8') Have Fun!
+                        div
+                            h3  
+                        .form-signin
+                            input.form-control.center-block(maxlength='30', type='text', placeholder='Enter User Name', name='username')
+                            h6
+                            input.form-control.center-block(maxlength='30', type='password', placeholder='Enter Password', name='password')
+                        div
+                            h4  
+                            button.btn.btn-default.btn-default.btn-block(action='login/login', method='post', type='submit', style='opacity: 0.8') Log In
+                            h6
+                        div
+                            a.btn.btn-block.btn-warning(href="/register/register", role="button") Register
+
+script.
+    var enter = #{enter};
+    if(enter == 0) {
+        alert('Please enter user name.');
+    } else if (enter == 1) {
+        alert('Please enter password');
+    } else if (enter == 2) {
+        alert('User Name does not exist.');
+    } else if (enter == 3) {
+        alert('Wrong password.');
+    } else if (enter == 5) {
+        alert('Successfully register!');
+    } else {
+    }
+
+
+
+.footer
+    p  
+    p(style='color: #606060') ©徐肖瑶   浙江大学计算机学院
+    script(src='/static/js/jquery-1.8.3.min.js')
+    script(src='/static/js/socket.js')
+    script(src='/static/js/bootstrap/js/bootstrap.min.js')
